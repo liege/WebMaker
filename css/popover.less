@@ -2,10 +2,8 @@
 /*编辑框style*/
 #popover{
 	display: none;
-	float: left;
+	margin-left: 374px!important;
 	position: relative;
-	width: 480px;	
-	margin-left: 20px;
 	-moz-user-select: text;
 	-webkit-user-select: text;
 	.popover-inner{
@@ -24,6 +22,7 @@
 			position: absolute;
 			left:-10px;
 			top:20px;
+			z-index:99;
 		}
 		&:before{
 			content: "";
@@ -54,6 +53,11 @@
 			line-height: 20px;
 			padding: 4px 6px;
 			border-radius: 4px;
+		}
+		textarea{
+		  width:98%;
+		  max-width:98%;
+		  padding: 4px;
 		}
 		.input-l{
 			width: 310px;
@@ -101,6 +105,17 @@
 				float: none;
 			}
 		}
+		#pickfiles,#uploadfiles{
+		  border:1px solid #ccc;
+		  border-radius:1px;
+		  background: #fff;
+		  color: #333;
+		  padding:6px;
+		}
+		#uploadfiles{
+		  color: #fff;
+		  background: #ffa200;
+		}
 	}	
 }
 /*编辑框内容容器*/
@@ -134,4 +149,151 @@
 		    margin-left: 0;
 		}
 	}
+}
+/*append style for getproducts 活动流程*/
+.phone_preview{
+  padding-bottom: 20px!important;
+}
+.add_field{
+  //display: none!important;
+}
+.phone_preview .phone_bd{
+  min-height:500px;
+  .pic{
+    text-align:center;
+    padding: 10px;
+  }
+  .txt{
+    padding: 10px;
+    color: #333;
+  }
+}
+#editor_body{
+  .current{outline:2px dashed rgba(255,0,0,0.5);}
+  .msgVerify{
+    padding: 20px 0;
+    .get_immediately{
+      width:100%!important;
+    }  
+    &.red{
+      background: #ffffcc;
+      .fbtn,.finput{
+        border:1px solid #000;
+      }
+      .fbtn{
+        background: -webkit-linear-gradient(top,#fff,#eee);
+      }      
+    }
+  }
+  .locationInfo{
+    padding: 20px 0;
+    .row{
+      line-height:35px;
+      text-align: left;
+     }
+     .finput{
+       position: relative;
+       &:after{
+         position: absolute;
+         right:10px;
+         top:12px;
+         content:"";
+         border:10px solid transparent;
+         border-top-color:#000;
+       }
+     }
+  }
+  .fbtn,.finput{
+      line-height:35px;
+      text-indent:4px;      
+  }
+  .moduleWrap{position: relative;}
+  .btnWrap{position: absolute; right: 0;bottom: 0;}      
+  
+}
+
+//拖动控件样式 slideControl
+@c0:#eee;  
+@c1:#eee;  
+@c2:#eee;  
+@c3:#ddd; 
+// @c0:#feccb1;  
+// @c1:#f17432;  
+// @c2:#ea5507;  
+// @c3:#fb955e; 
+.slideControlContainer {
+  height:10px; 
+  background: #efefef; /* Old browsers */
+  background: -moz-linear-gradient(top, #efefef 0%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #efefef 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #efefef 0%,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #efefef 0%,#ffffff 100%); /* IE10+ */
+  border:1px solid #ccc; box-shadow:inset 0 1px 0 #fff;
+  border-radius:7px;
+  cursor:pointer;
+  width:340px;
+  float:left;
+  margin:10px 10px 0 10px;
+}
+ 
+.slideControlFill {
+  background: @c2; /* Old browsers */
+  background: -moz-linear-gradient(top, @c0 0%, @c1 50%, @c2 51%, @c3 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@c0), color-stop(50%,@c1), color-stop(51%,@c2), color-stop(100%,@c3)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, @c0 0%,@c1 50%,@c2 51%,@c3 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, @c0 0%,@c1 50%,@c2 51%,@c3 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, @c0 0%,@c1 50%,@c2 51%,@c3 100%); /* IE10+ */
+  display:block;
+  height:100%;
+  border-radius:7px;
+  box-shadow:inset 0 1px 0 #F9D7C5;
+  position:relative;
+  z-index:1;
+  overflow:visible !important;
+}
+  
+.slideControlHandle {
+  display:block; 
+  background: @c2; /* Old browsers */
+  background: -moz-linear-gradient(top, @c0 0%, @c1 50%, @c2 51%, @c3 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@c0), color-stop(50%,@c1), color-stop(51%,@c2), color-stop(100%,@c3)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, @c0 0%,@c1 50%,@c2 51%,@c3 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, @c0 0%,@c1 50%,@c2 51%,@c3 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, @c0 0%,@c1 50%,@c2 51%,@c3 100%); /* IE10+ */
+  border-radius:15px;
+  border:5px solid #fff;
+  width:10px;
+  height:10px;
+  box-shadow:0 0 1px #555;
+  position:absolute;
+  right:0;
+  top:-5px;
+  z-index:5;
+  cursor:pointer;
+}
+
+.ieShadow {
+  zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=0,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=45,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=90,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=135,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=180,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=225,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=270,strength=1), 
+  progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa,direction=315,strength=1);
+  top:-8px;
+  right:-4px;
+}
+  
+.slideControlInput {
+  width:35px!important;
+  font-size:1.5em;
+  padding:3px 5px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  text-align:center;
+  color:#333;
+  font-weight:bold;
 }

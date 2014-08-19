@@ -290,15 +290,7 @@ ul.nav li:first-child {
 .fl {
   float: left; }
 
-.btn {
-  display: inline-block;
-  height: 38px;
-  line-height: 38px;
-  text-align: center;
-  padding: 0 5px;
-  border: 1px solid #cccccc;
-  background: -webkit-linear-gradient(top, #cccccc, white);
-  background: -moz-linear-gradient(top, #cccccc, white); }
+
 
 .btn.btn-lg {
   width: 260px; }
